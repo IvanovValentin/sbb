@@ -1,0 +1,31 @@
+
+.root-template-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    min-height: 770px;
+}
+
+.my-header {
+    width: 998px;
+    height: 100px;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    background-color:  #F5F5F5;
+}
+
+.my-content {
+    margin-top: 7px;
+    width: 998px;
+    height: 665px;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    background-color: lavender;
+
+}
+body{
+    background-image: url("/resources/images/background.jpg");
+}
+
+
+
