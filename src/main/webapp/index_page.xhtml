@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui"
+                template="templates/mainTemplate.xhtml">
+
+    <ui:define name="content">
+        <div class="message">
+            <h:outputText rendered="#{not empty authorizationBean.message}"
+                    value="#{authorizationBean.message}"/>
+        </div>
+        <p:panel header="Вход">
+        <h:outputText value="#{registrationBean.message}"/>
+        <h:form>
+            <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                <h:outputText value="Имя пользователя"/>
+                <h:inputText id="login" value="#{authorizationBean.login}" size="20"
+                             required="true" requiredMessage="поле 'Имя пользователя' не может быть пустым"/>
+                <h:outputText value="Пароль"/>
+                <h:inputSecret  value="#{authorizationBean.password}" size="20"
+                                required="true" requiredMessage="поле 'Пароль' не может быть пустым"/>
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                    <p:commandButton action="#{authorizationBean.authorization}" value="Войти"/>
+                    <a class="link" href="/registration_page.xhtml">Регистрация</a>
+                </h:panelGrid>
+            </h:panelGrid>
+
+        </h:form>
+        </p:panel>
+    </ui:define>
+
+</ui:composition>
